@@ -1,5 +1,7 @@
     package main
-
+    /**
+    类型判断   if  switch   x.(type)
+    */
     import (
         "fmt"
     )

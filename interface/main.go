@@ -1,4 +1,14 @@
     package main
+    /**
+   	1.判断类型 x.(T)  x为需要判断的类型变量；T：目标类型
+   	_,ok=x.(T);
+   	x.(T)只能是接口类型判断，所以传参时候，传入的是接口类型
+
+   	2.空接口的默认值为nil
+   	3.空接口可以接收任意类型，类型判断常用的有两种方法：Comma-ok断言、switch判断。
+   	4.一个类型实现多个接口
+   	5.指针与值类型实现接口的区别
+    */
 
     import (
         "fmt"
@@ -31,8 +41,8 @@
 
 
     func main() {
-        cbs := Student{Name:"咖啡色的羊驼"}
-        CheckPeople(cbs) // Student implements People
+        //cbs := Student{Name:"咖啡色的羊驼"}
+        //CheckPeople(cbs) // Student implements People
     }
 
     // func main() {
