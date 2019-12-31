@@ -40,10 +40,10 @@
     }
 
 
-    func main() {
-        //cbs := Student{Name:"咖啡色的羊驼"}
-        //CheckPeople(cbs) // Student implements People
-    }
+    // func main() {
+    //     //cbs := Student{Name:"咖啡色的羊驼"}
+    //     //CheckPeople(cbs) // Student implements People
+    // }
 
     // func main() {
     //     cbs := Student{Name:"咖啡色的羊驼"}

@@ -23,7 +23,42 @@ b.取结构体的地址实例化：ins := &T{}
 	ins 为结构体的实例，类型为 *T，是指针类型。
 c.基本实例化：var ins T
 
-4.net/http
+4.time
+
+Golang神奇的2006-01-02 15:04:05:https://www.jianshu.com/p/c7f7fbb16932
+
+时间可分为时间点与时间段，golang 也不例外，提供了以下两种基础类型
+- 时间点(Time)
+- 时间段(Duration)
+
+除此之外也提供了以下类型，做一些特定的业务
+- 时区(Location)
+- Ticker
+- Timer(定时器)
+
+
+4.net/http   https://blog.csdn.net/linkvivi/article/details/80250602
+步骤：
+1.定义处理器： 
+	func initHandler(w http.ResponseWriter,r *http.Request)
+	
+2.在路由器中注册处理器  
+	http.HandleFunc("/", initHandler)
+	
+3.实例化serve对象(设置监听地址和端口)：
+	err := http.ListenAndServe(":9090", nil) 
+	
+	server := &Server{Addr: addr, Handler: handler}
+    server.ListenAndServe()
+	源码：
+	func HandleFunc(pattern string, handler func(ResponseWriter, *Request)) {
+		DefaultServeMux.HandleFunc(pattern, handler)
+	}
+
+疑问：
+defer
+panic
+sync.RWMutex
 
 
 
